@@ -1,0 +1,129 @@
+body {
+    background-color: aquamarine;
+    font-family: 'Mochiy Pop One', sans-serif;
+}
+
+.login-form-box {
+    display: flexbox;
+    align-content: center;
+    border-style: inset;
+    width: 50%;
+    margin-left: 25%;
+    padding: 40px;
+    padding-right: 30px;
+    margin-top: 30px;
+    margin-bottom: 20%;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.btn-default {
+    background-color: rgb(233, 173, 61);
+    color:aliceblue;
+}
+
+.form-label {
+    overflow: visible;
+    position:relative;
+}
+
+.title-text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10%;
+}
+
+#title {
+    font-family: 'Mochiy Pop One', sans-serif;
+}
+
+
+#login-text {
+    margin-left: 15%;
+    font-size: 20px;
+}
+
+.logo {
+    margin-left: 2%;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+}
+
+.album-boxes {
+    display: flex;
+    flex-direction: row;
+    margin-left: 3.5%;
+}
+
+#alb {
+    margin-top: 3%;
+    margin: 3%;
+    background-color: rgb(233, 173, 61);
+    padding: 1.2%;
+    border-radius: 8px;
+    color:aliceblue;
+    border: none;
+}
+
+#alb:hover {
+    background-color: rgb(249, 162, 0);
+}
+
+.user-profile {
+    margin-left: 6%;
+    margin-top: 5%;
+    background-color: aliceblue;
+    width: 60%;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 55px;
+    border-radius: 8px;
+}
+
+.btn-warning {
+    margin-left: 36%;
+    margin-top: 70%;
+}
+
+.photo-upload {
+    margin-top: 3%;
+    margin-left: 6%;
+    width: 60%;
+}
+
+.form-label {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.align-items-center {
+    margin-right: 5%;
+    margin-left: -3%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+}
+.align-items-center {
+    flex: 1 1 160px;
+}
+
+.col {
+    margin: 3%;
+    background-color: aliceblue;
+    padding: 10%;
+    border-radius: 8px;
+    border-style: inset;
+}
+
+.album-title {
+    margin-left: 3%;
+}
+
+
+
+
+
