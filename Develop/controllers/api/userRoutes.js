@@ -1,6 +1,61 @@
 const router = require("express").Router();
 const { Photo } = require("../../models/Photo");
 
+//GET request for All photos
+router.get("/", async (req, res) => {
+  try {
+    const photoData = await Photo.findAll({
+      // include: [
+      //   {//
+      //     model: Painting,
+      //     attributes: ['filename', 'description'],
+      //   },
+      // ], !!!! add info from db
+    });
+
+    const galleries = photoData.map((gallery) => gallery.get({ plain: true }));
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+//GET request for one album
+router.get("/gallery/:id", async (req, res) => {
+  try {
+    const photoData = await Gallery.findByPk(req.params.id, {
+      include: [
+        //   {
+        //     model: Painting,
+        //     attributes: [
+        //       'id',
+        //       'title',
+        //       'artist',
+        //       'exhibition_date',
+        //       'filename',
+        //       'description',
+        //     ],
+        //   },
+      ],
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+// GET request for one photo
+router.get("/image/:id", async (req, res) => {
+  try {
+    const photoData = await Photo.findByPk(req.params.id);
+
+    const image = photoData.get({ plain: true });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 // POST request
 router.post("/", async (req, res) => {
   try {
@@ -18,68 +73,7 @@ router.post("/", async (req, res) => {
   }
 });
 
-router.get('/', async (req, res) => {
-  try {
-    const photoData = await Photo.findAll({
-      // include: [
-      //   {//
-      //     model: Painting,
-      //     attributes: ['filename', 'description'],
-      //   },
-      // ], !!!! add info from db
-    });
-
-    const galleries = photoData.map((gallery) =>
-      gallery.get({ plain: true })
-    );
-
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
-});
-
-
-//to get one album
-router.get('/gallery/:id', async (req, res) => {
-  try {
-    const photoData = await Gallery.findByPk(req.params.id, {
-      include: [
-      //   {
-      //     model: Painting,
-      //     attributes: [
-      //       'id',
-      //       'title',
-      //       'artist',
-      //       'exhibition_date',
-      //       'filename',
-      //       'description',
-      //     ],
-      //   },
-      ],
-    });
-
-  } catch (err) {
-      console.log(err);
-      res.status(500).json(err);
-    }
-  });
-
-
-// GET one photo
-router.get('/image/:id', async (req, res) => {
-  try {
-    const photoData = await Photo.findByPk(req.params.id);
-
-    const image = photoData.get({ plain: true });
-
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
-});
-
-//delete request
+//Delete request
 router.delete("/:id", async (req, res) => {
   try {
     const photoData = await Photo.destroy({
