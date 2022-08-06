@@ -4,4 +4,6 @@ const sequelize = require("../config/connection");
 
 class Photo extends Model {}
 
+Photo.init({});
+
 module.exports = Photo;
