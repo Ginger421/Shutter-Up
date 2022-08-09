@@ -65,20 +65,6 @@ header {
     margin-left: 3.5%;
 }
 
-#alb {
-    margin-top: 3%;
-    margin: 3%;
-    background-color: rgb(233, 173, 61);
-    padding: 1.2%;
-    border-radius: 8px;
-    color:aliceblue;
-    border: none;
-}
-
-#alb:hover {
-    background-color: rgb(249, 162, 0);
-}
-
 .user-profile {
     margin-left: 6%;
     margin-top: 5%;
