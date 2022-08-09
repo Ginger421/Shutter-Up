@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require("sequelize");
-const bcrypt = require("bcrypt");
+// const bcrypt = require("bcrypt");
 const sequelize = require("../config/connection");
 
 class Photo extends Model {}
@@ -38,7 +38,7 @@ Photo.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "galleries",
+    modelName: "photo",
   }
 );
 
