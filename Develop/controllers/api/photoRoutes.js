@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Photo } = require("../../models/Photo");
+const { Photo } = require("../../models");
 
 //GET request for All photos
 router.get("/", async (req, res) => {
