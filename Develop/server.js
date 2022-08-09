@@ -1,7 +1,6 @@
 const path = require('path');
 const express = require("express");
 const session = require("express-session");
-const cookieParser = require("cookie-parser");
 const routes = require("./controllers");
 const exphbs = require("express-handlebars");
 
@@ -30,7 +29,6 @@ const sess = {
 
 app.use(session(sess));
 
-app.use(cookieParser());
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log("Now listening"));
