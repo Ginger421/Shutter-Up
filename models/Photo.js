@@ -1,4 +1,9 @@
 const { Model, DataTypes } = require("sequelize");
+<<<<<<< HEAD
+const bcrypt = require("bcrypt");
+const sequelize = require("../config/connection");
+
+=======
 // const bcrypt = require("bcrypt");
 const sequelize = require("../config/connection");
 
@@ -42,4 +47,5 @@ Photo.init(
   }
 );
 
+>>>>>>> 60e3dcb20d31bff834644f2fddbb430ea2660f82
 module.exports = Photo;
