@@ -4,7 +4,6 @@ const session = require("express-session");
 const exphbs = require("express-handlebars");
 const path = require("path");
 const routes = require("./controllers");
-
 const sequelize = require("./config/connection");
 const helpers = require("./utils/helpers");
 
@@ -23,7 +22,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use(routes);
->>>>>>> 36a618ca97c09265071b49a32d07d05cca6214d0
+
 
 //authentication w/ cookies & session
 const sess = {
