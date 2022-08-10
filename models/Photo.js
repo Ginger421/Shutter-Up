@@ -20,10 +20,6 @@ Photo.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    album_name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
