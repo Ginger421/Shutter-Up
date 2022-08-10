@@ -1,23 +1,16 @@
 const sequelize = require("../config/connection");
-const { User, Photo } = require("../models");
+const User = require("../models/User");
+const Photo = require("../models/Photo");
 
-const userData = require("./userData.json");
-const photoData = require("./photoData.json");
+const userDataSeed = require("./userDataSeed.json");
+const photoDataSeed = require("./photoDataSeed.json");
 
 const seedAll = async () => {
   await sequelize.sync({ force: true });
 
-  const users = await User.bulkCreate(userData, {
-    individualHooks: true,
-    returning: true,
-  });
+  await User.bulkCreate(userDataSeed);
 
-  for (const photo of photoData) {
-    await Photo.create({
-      ...photo,
-      user_id: users[Math.floor(Math.random() * users.length)].id,
-    });
-  }
+  await Photo.bulkCreate(photoDataSeed);
 
   process.exit(0);
 };
