@@ -2,9 +2,19 @@ require('dotenv').config();
 
 const cloudinary = require('cloudinary').v2;
 
-// cloudinary.config(
-//   {api_key:process.env.API_KEY}
-// )
-cloudinary.uploader.upload("./images/Planet9_3840x2160.jpg", {resource_type: "auto"})
+// uploads resource to cloudinary
+cloudinary.uploader.upload("file name here", {resource_type: "auto"})
   .then(result => {console.log(result)})
   .catch(error => {console.log(error)});
+
+
+//  List all resources
+cloudinary.api.resources()
+	.then(result => {console.log(result)})
+	.catch(error => {console.log(error)});
+
+
+// Destroy with Upload API
+cloudinary.uploader.destroy("file name here", {invalidate: true})
+	.then(result => {console.log(result)})
+	.catch(error => {console.log(error)});
