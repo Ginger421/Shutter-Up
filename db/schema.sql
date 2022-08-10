@@ -8,7 +8,7 @@ CREATE TABLE photo (
     id INTEGER PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(255) NOT NULL,
     date_created DATETIME NOT NULL,
-    user_id INTEGER,
+    user_id INTEGER
 );
 
 CREATE TABLE user (
