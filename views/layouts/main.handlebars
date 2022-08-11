@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
-    <link rel= "stylesheet" href="/project2/assets/style.css">
+    <link rel= "stylesheet" href="/css/style.css">
     <title> Profile Page </title>
 </head>
 <body>
@@ -24,9 +24,9 @@
     <div class="user-profile">
         <h2> User Name </h2>   
     </div>
-    <div class="friend-button">
+    {{!-- <div class="friend-button">
         <button type="button" class="btn btn-warning"> Add Friend </button>
-    </div>
+    </div> --}}
 </header>
 <div class="photo-upload">
     <label for="formFileDisabled" class="form-label"> Upload Your Photos!</label>
@@ -51,6 +51,7 @@
     <div class="col">
         Photo
     </div>
+    {{ body }}
 </div>
 </body>
 </html>
