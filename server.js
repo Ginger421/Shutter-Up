@@ -2,7 +2,7 @@ require("dotenv").config();
 const path = require("path");
 const express = require("express");
 const session = require("express-session");
-const routes = require("./controllers");
+const controllers = require("./controllers");
 const exphbs = require("express-handlebars");
 
 const sequelize = require("./config/connection");
@@ -21,7 +21,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use(routes);
+app.use(controllers);
 
 //authentication w/ cookies & session
 const sess = {
@@ -30,8 +30,8 @@ const sess = {
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
-    db: sequelize
-  })
+    db: sequelize,
+  }),
 };
 
 app.use(session(sess));
