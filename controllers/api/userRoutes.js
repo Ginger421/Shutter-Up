@@ -23,7 +23,7 @@ router.post("/", async (req, res) => {
 router.post("/login", async (req, res) => {
   try {
     const userData = await User.findOne({
-      where: { email: req.body.email },
+      where: { name: req.body.username },
     });
 
     if (!userData) {
@@ -43,21 +43,10 @@ router.post("/login", async (req, res) => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
 
-      res.json({ username: userData, message: "You're logged in!" });
+      res.render("homepage");
     });
   } catch (err) {
     res.status(404).json(err);
-  }
-});
-
-//logout
-router.post("/logout", (req, res) => {
-  if (req.session.logged_in) {
-    req.session.destroy(() => {
-      res.status(200).end();
-    });
-  } else {
-    res.status(404).end();
   }
 });
 

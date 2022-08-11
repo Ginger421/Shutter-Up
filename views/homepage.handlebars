@@ -1,14 +1,32 @@
-{{#each userData as |userData|}}
-  <div class="">
-    <div class="">
-      <h2>{{{get_emoji}}} {{user.name}}</h2>
+<body>
+<header>
+    <div class="user-profile">
+        <h2> User Name </h2>   
     </div>
-    <div class="">
-      <h3></h3>
-      <h3></h3>
-      <h3></h3>
-      <h3></h3>
-      <h3></h3>
+</header>
+<div class="photo-upload">
+    <label for="formFileDisabled" class="form-label"> Upload Your Photos!</label>
+    <input class="form-control" type="file" id="formFileDisabled" disabled />
+</div>
+<div class="row align-items-center">
+    <div class="col">
+      Photo
     </div>
-  </div>
-{{/each}}
+    <div class="col">
+      Photo
+    </div>
+    <div class="col">
+      Photo
+    </div>
+    <div class="col">
+        Photo
+    </div>
+    <div class="col">
+        Photo
+    </div>
+    <div class="col">
+        Photo
+    </div>
+</div>
+</body>
+
