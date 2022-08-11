@@ -2,47 +2,55 @@ const router = require("express").Router();
 const { Photo } = require("../../models");
 
 //GET request for All photos
-// router.get("/", async (req, res) => {
-//   try {
-//     const photoData = await Photo.findAll({
-//       // include: [
-//       //   {//
-//       //     model: Painting,
-//       //     attributes: ['filename', 'description'],
-//       //   },
-//       // ], !!!! add info from db
-//     });
+router.get("/", async (req, res) => {
+  try {
+    const photoData = await Photo.findAll({
+      // include: [
+      //   {//
+      //     model: Painting,
+      //     attributes: ['filename', 'description'],
+      //   },
+      // ], !!!! add info from db
+    });
 
-//     const galleries = photoData.map((gallery) => gallery.get({ plain: true }));
-//   } catch (err) {
-//     console.log(err);
-//     res.status(500).json(err);
-//   }
-// });
+    const galleries = photoData.map((gallery) => gallery.get({ plain: true }));
+
+    res.render('homepage', {
+      galleries,
+      loggedIn: req.session.loggedIn,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
 
 //GET request for one album
-// router.get("/gallery/:id", async (req, res) => {
-//   try {
-//     const photoData = await Gallery.findByPk(req.params.id, {
-//       include: [
-//         //   {
-//         //     model: Painting,
-//         //     attributes: [
-//         //       'id',
-//         //       'title',
-//         //       'artist',
-//         //       'exhibition_date',
-//         //       'filename',
-//         //       'description',
-//         //     ],
-//         //   },
-//       ],
-//     });
-//   } catch (err) {
-//     console.log(err);
-//     res.status(500).json(err);
-//   }
-// });
+router.get("/gallery/:id", async (req, res) => {
+  try {
+    const photoData = await Gallery.findByPk(req.params.id, {
+      include: [
+        //   {
+        //     model: Painting,
+        //     attributes: [
+        //       'id',
+        //       'title',
+        //       'artist',
+        //       'exhibition_date',
+        //       'filename',
+        //       'description',
+        //     ],
+        //   },
+      ],
+    });
+
+    const gallery = photoData.get({ plain: true });
+    res.render('gallery', { gallery, loggedIn: req.session.loggedIn });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
 
 // GET request for one photo
 router.get("/image/:id", async (req, res) => {
@@ -50,6 +58,7 @@ router.get("/image/:id", async (req, res) => {
     const photoData = await Photo.findByPk(req.params.id);
 
     const image = photoData.get({ plain: true });
+    res.render('image', { image, loggedIn: req.session.loggedIn});
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
