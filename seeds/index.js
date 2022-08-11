@@ -10,7 +10,7 @@ const seedAll = async () => {
 
   await User.bulkCreate(userDataSeed);
 
-  await Photo.bulkCreate(photoDataSeed);
+  // await Photo.bulkCreate(photoDataSeed);
 
   process.exit(0);
 };

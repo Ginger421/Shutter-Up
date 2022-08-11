@@ -8,50 +8,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
-    <link rel= "stylesheet" href="/css/style.css">
+    <link rel= "stylesheet" href="public/css/style.css">
     <title> Profile Page </title>
 </head>
+
 <body>
     <div>
         <h4 class="logo"> 📷  Shutter Up! </h4>
     </div>
-<header>
+
   {{#if loggedIn}}
-  <a href="/project2/assets/profile.html"></a>
+  <a href="/homepage"></a>
   {{else}}
-  <a href="/project2/assets/login.html"></a>
+  <a href="/login"></a>
   {{/if}}
-    <div class="user-profile">
-        <h2> User Name </h2>   
-    </div>
-    {{!-- <div class="friend-button">
-        <button type="button" class="btn btn-warning"> Add Friend </button>
-    </div> --}}
-</header>
-<div class="photo-upload">
-    <label for="formFileDisabled" class="form-label"> Upload Your Photos!</label>
-    <input class="form-control" type="file" id="formFileDisabled" disabled />
-</div>
-<div class="row align-items-center">
-    <div class="col">
-      Photo
-    </div>
-    <div class="col">
-      Photo
-    </div>
-    <div class="col">
-      Photo
-    </div>
-    <div class="col">
-        Photo
-    </div>
-    <div class="col">
-        Photo
-    </div>
-    <div class="col">
-        Photo
-    </div>
-    {{ body }}
-</div>
+    
+    {{{ body }}}
+
 </body>
 </html>
