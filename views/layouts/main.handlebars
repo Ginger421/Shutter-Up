@@ -18,37 +18,10 @@
     </div>
 <header>
   {{#if loggedIn}}
-    <div class="user-profile">
-        <h2> User Name </h2>   
-    </div>
-    <div class="friend-button">
-        <button type="button" class="btn btn-warning"> Add Friend </button>
-    </div>
+  <a href="/project2/assets/profile.html"></a>
+  {{else}}
+  <a href="/project2/assets/login.html"></a>
+  {{/if}}
 </header>
-<div class="photo-upload">
-    <label for="formFileDisabled" class="form-label"> Upload Your Photos!</label>
-    <input class="form-control" type="file" id="formFileDisabled" disabled />
-</div>
-<div class="row align-items-center">
-    <div class="col">
-      Photo
-    </div>
-    <div class="col">
-      Photo
-    </div>
-    <div class="col">
-      Photo
-    </div>
-    <div class="col">
-        Photo
-    </div>
-    <div class="col">
-        Photo
-    </div>
-    <div class="col">
-        Photo
-    </div>
-</div>
 </body>
-
 </html>
