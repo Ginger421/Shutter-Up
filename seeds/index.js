@@ -3,7 +3,7 @@ const User = require("../models/User");
 const Photo = require("../models/Photo");
 
 const userDataSeed = require("./userDataSeed.json");
-const photoDataSeed = require("./photoDataSeed.json");
+const photoDataSeed = require("./photoDataSeed.js");
 
 const seedAll = async () => {
   await sequelize.sync({ force: true });
