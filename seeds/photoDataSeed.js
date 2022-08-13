@@ -4,7 +4,7 @@
 //const {} = require('') 
 
 
-const photoData = [
+const photodata = [
     {
         username : '',
         photoId : '',
@@ -25,4 +25,7 @@ const photoData = [
         photoId : '',
         filename : '04-sloth.jpg',
     }
-]
+];
+
+const seedPhoto = () =>
+    .bulkCreate(photodata)
