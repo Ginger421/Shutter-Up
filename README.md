@@ -1,4 +1,4 @@
-# project2
+# Shutter Up Photo Sharing
 
 By: Lisa Le, Ginger Owen, Zoya Sarow, Dosiano Torrez, & Adam Wollert
 
