@@ -90,10 +90,10 @@ header {
 }
 
 img {
-    width: 100%;
-    height: auto;
-    vertical-align: middle;
-    padding: 5%;
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+  padding: 5%;
 }
 
 .align-items-center {
@@ -105,13 +105,27 @@ img {
   margin-top: 3%;
 }
 
-.img1 { flex: 0.7826; }
-.img2 { flex: calc(100% * 1.75); }
-.img3 { flex: calc(100% * 1.75); }
-.img4 { flex: calc(100% * 1.75); }
-.img5 { flex: calc(100% * 1.75); }
-.img6 { flex: calc(100% * 1.75); }
-.img7 { flex: calc(100% * 1.75); }
+.img1 {
+  flex: calc(100% * 1.75);
+}
+.img2 {
+  flex: calc(100% * 1.75);
+}
+.img3 {
+  flex: calc(100% * 1.75);
+}
+.img4 {
+  flex: calc(100% * 1.75);
+}
+.img5 {
+  flex: calc(100% * 1.75);
+}
+.img6 {
+  flex: calc(100% * 1.75);
+}
+.img7 {
+  flex: calc(100% * 1.75);
+}
 
 /* .align-items-center {
   flex: 1 1 160px;
