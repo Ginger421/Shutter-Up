@@ -92,20 +92,23 @@ header {
 img {
     width: 100%;
     height: auto;
-    vertical-align: middle;
     padding: 5%;
 }
 
 .align-items-center {
-  /* margin-right: 5%;
-  margin-left: 3%; */
   display: flex;
+  /* flex-wrap: wrap;
+  flex-direction: row-reverse; */
   margin-right: 3%;
   margin-left: 3%;
   margin-top: 3%;
 }
 
-.img1 { flex: 0.7826; }
+img {
+    flex: 1 1 80px;
+  }
+
+.img1 { flex: calc(100% * 1.75); }
 .img2 { flex: calc(100% * 1.75); }
 .img3 { flex: calc(100% * 1.75); }
 .img4 { flex: calc(100% * 1.75); }
@@ -113,12 +116,6 @@ img {
 .img6 { flex: calc(100% * 1.75); }
 .img7 { flex: calc(100% * 1.75); }
 
-/* .align-items-center {
-  flex: 1 1 160px;
-} */
-/* 
-.col {
-  margin: 3%;
-  padding: 10%;
-  max-width: 30%;
-} */
+
+
+
