@@ -21,8 +21,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-app.use(controllers);
-
 //authentication w/ cookies & session
 const sess = {
   secret: "password",
@@ -35,6 +33,7 @@ const sess = {
 };
 
 app.use(session(sess));
+app.use(controllers);
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () =>
