@@ -26,7 +26,9 @@ Welcome to your own photo gallery! This application is designed for simple stora
 
 ## Demo Video
 
-(insert video here)
+[Quick Demo Video](https://drive.google.com/file/d/1Fw6hL7S8XunC3jrwvir0knYd9HqYsUDu/view)
+
+![Gif](/assets/gif/demo.gif)
 
 ## Screenshots
 
