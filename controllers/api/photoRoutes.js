@@ -33,12 +33,9 @@ router.get("/gallery/:id", async (req, res) => {
         //   {
         //     model: Painting,
         //     attributes: [
+        //       'userName'
         //       'id',
-        //       'title',
-        //       'artist',
-        //       'exhibition_date',
         //       'filename',
-        //       'description',
         //     ],
         //   },
       ],
