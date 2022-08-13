@@ -4,16 +4,3 @@ CREATE DATABASE image_db;
 
 USE image_db;
 
-CREATE TABLE photo (
-    id INTEGER PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(255) NOT NULL,
-    date_created DATETIME NOT NULL,
-    user_id INTEGER
-);
-
-CREATE TABLE user (
-    id INTEGER PRIMARY KEY AUTO_INCREMENT,
-    username VARCHAR(255) NOT NULL,
-    email VARCHAR(255) NOT NULL,
-    password VARCHAR(255) NOT NULL
-);
