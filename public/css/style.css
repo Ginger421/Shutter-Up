@@ -37,6 +37,7 @@ body {
 
 #title {
     font-family: 'Mochiy Pop One', sans-serif;
+    font-size: 45px;
 }
 
 
@@ -51,6 +52,8 @@ body {
 }
 
 .logo {
+    margin-top: 5%;
+    margin-bottom: 3%;
     margin-left: 5%;
     zoom: 240%;
 }

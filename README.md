@@ -19,7 +19,7 @@ Welcome to your own photo gallery! This application is designed for simple stora
 - Handlebars.js
 - MYSQL
 
-  - Installation of Sequelize, Session, Express-Handlebars, Dotenv, MYSQL2, and Express must be installed for application to function properly
+  - Installation of Sequelize, Bcrypt, Session, Express-Handlebars, Dotenv, MYSQL2, and Express must be installed for application to function properly
 
 - Heroku: Used for deployment of site/application
 - Cloudinary: Used for hosting uploaded images
