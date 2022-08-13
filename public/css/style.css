@@ -78,10 +78,18 @@ header {
   margin-top: 70%;
 }
 
-.photo-upload {
+#upload_widget {
   margin-top: 3%;
   margin-left: 6%;
-  width: 60%;
+  padding: 1%;
+  background-color: rgb(21, 195, 169);
+  border-radius: 8px;
+  border-style: none;
+  color: aliceblue;
+}
+
+#upload_widget:hover {
+    background-color: grey;
 }
 
 .form-label {
@@ -90,15 +98,14 @@ header {
 }
 
 img {
-    width: 100%;
-    height: auto;
-    padding: 5%;
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+  padding: 5%;
 }
 
 .align-items-center {
   display: flex;
-  /* flex-wrap: wrap;
-  flex-direction: row-reverse; */
   margin-right: 3%;
   margin-left: 3%;
   margin-top: 3%;

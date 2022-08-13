@@ -4,6 +4,7 @@ const bcrypt = require("bcrypt");
 
 //creating new user
 router.post("/", async (req, res) => {
+  console.log("test" + User);
   try {
     const userData = await User.create({
       username: req.body.username,
