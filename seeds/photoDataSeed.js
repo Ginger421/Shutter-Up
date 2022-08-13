@@ -1,7 +1,7 @@
 
 
-//must find and link file
-//const {here} = require('') 
+//from models/Photo.js
+const { Photo } = require('../models') 
 
 
 const photodata = [
@@ -28,6 +28,6 @@ const photodata = [
 ];
 
 const seedPhoto = () =>
-//    here.bulkCreate(photodata);
+    Photo.bulkCreate(photodata);
 
 module.exports=seedPhoto;
