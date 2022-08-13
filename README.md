@@ -31,4 +31,4 @@ Welcome to your own photo gallery! This application is designed for simple stora
 ## Screenshots
 
 ![screenshot 1](/assets/images/Screenshot.PNG)
-![screenshot 2](/assets/images/screenshot2.PNG)
+![Screen Shot 2022-08-13 at 3 33 10 PM 2](https://user-images.githubusercontent.com/101853202/184511479-81317bee-0eb9-4327-b0fe-70aa4284bf46.png)
