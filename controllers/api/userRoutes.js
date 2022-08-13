@@ -1,8 +1,10 @@
 const router = require("express").Router();
 const { User } = require("../../models");
+const bcrypt = require("bcrypt");
 
 //creating new user
 router.post("/", async (req, res) => {
+  console.log("test" + User);
   try {
     const userData = await User.create({
       username: req.body.username,
@@ -15,6 +17,7 @@ router.post("/", async (req, res) => {
       res.status(200).json(userData);
     });
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });
@@ -32,7 +35,10 @@ router.post("/login", async (req, res) => {
         .json({ message: "Error, Incorrect username or password entered" });
       return;
     }
-    const correctPw = await userData.checkPassword(req.body.password);
+    const correctPw = await bcrypt.compare(
+      req.body.password,
+      userData.password
+    );
     if (!correctPw) {
       res
         .status(404)
@@ -48,7 +54,7 @@ router.post("/login", async (req, res) => {
         .status(200)
         .json({ user: userData, message: "You are now logged in" });
 
-      res.render("homepage");
+      // res.render("homepage");
     });
   } catch (err) {
     console.log(err);

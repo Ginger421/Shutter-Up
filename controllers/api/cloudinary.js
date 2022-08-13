@@ -1,6 +1,6 @@
-require('dotenv').config();
+require("dotenv").config();
 
-const cloudinary = require('cloudinary').v2;
+const cloudinary = require("cloudinary").v2;
 
 //const { CloudinaryStorage } = require('multer-storage-cloudinary');
 
@@ -26,3 +26,5 @@ cloudinary.uploader.upload("./assets/images/01-squirrel.jpg", {resource_type: "a
 // cloudinary.uploader.destroy("file name here", {invalidate: true})
 // 	.then(result => {console.log(result)})
 // 	.catch(error => {console.log(error)});
+
+

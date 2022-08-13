@@ -8,9 +8,9 @@ const photoDataSeed = require("./photoDataSeed.js");
 const seedAll = async () => {
   await sequelize.sync({ force: true });
 
-  await User.bulkCreate(userDataSeed);
+  await User.bulkCreate(userDataSeed, { individualHooks: true });
 
-  // await Photo.bulkCreate(photoDataSeed);
+  await Photo.bulkCreate(photoDataSeed);
 
   process.exit(0);
 };
