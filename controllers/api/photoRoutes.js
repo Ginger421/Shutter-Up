@@ -5,12 +5,17 @@ const { Photo } = require("../../models");
 router.get("/", async (req, res) => {
   try {
     const photoData = await Photo.findAll({
-      // include: [
-      //   {//
-      //     model: Painting,
-      //     attributes: ['filename', 'description'],
-      //   },
-      // ], !!!! add info from db
+      include: [
+        {
+          model: Photo,
+          attributes: [
+            'id', 
+            'name',
+            'date_created',
+            'user_id'
+          ],
+        },
+      ], 
     });
 
     const galleries = photoData.map((gallery) => gallery.get({ plain: true }));
@@ -25,32 +30,29 @@ router.get("/", async (req, res) => {
   }
 });
 
-//GET request for one album
-router.get("/gallery/:id", async (req, res) => {
-  try {
-    const photoData = await Gallery.findByPk(req.params.id, {
-      include: [
-        //   {
-        //     model: Painting,
-        //     attributes: [
-        //       'id',
-        //       'title',
-        //       'artist',
-        //       'exhibition_date',
-        //       'filename',
-        //       'description',
-        //     ],
-        //   },
-      ],
-    });
+//GET request for one album will work on later, need to get 
+// router.get("/gallery/:id", async (req, res) => {
+//   try {
+//     const photoData = await Gallery.findByPk(req.params.id, {
+//       include: [
+//         //   {
+//         //     model: Photo,
+//         //     attributes: [
+//         //       'userName'
+//         //       'id',
+//         //       'filename',
+//         //     ],
+//         //   },
+//       ],
+//     });
 
-    const gallery = photoData.get({ plain: true });
-    res.render('gallery', { gallery, loggedIn: req.session.loggedIn });
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
-});
+//     const gallery = photoData.get({ plain: true });
+//     res.render('gallery', { gallery, loggedIn: req.session.loggedIn });
+//   } catch (err) {
+//     console.log(err);
+//     res.status(500).json(err);
+//   }
+// });
 
 // GET request for one photo
 router.get("/image/:id", async (req, res) => {
