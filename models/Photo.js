@@ -38,3 +38,6 @@ Photo.init(
 );
 
 module.exports = Photo;
+
+
+//Photo is referrenced in photoDataSeed.js, models/index.js
