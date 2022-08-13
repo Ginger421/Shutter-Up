@@ -1,7 +1,7 @@
 
 
 //must find and link file
-//const {} = require('') 
+//const {here} = require('') 
 
 
 const photodata = [
@@ -28,4 +28,6 @@ const photodata = [
 ];
 
 const seedPhoto = () =>
-    .bulkCreate(photodata)
+//    here.bulkCreate(photodata);
+
+module.exports=seedPhoto;
