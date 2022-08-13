@@ -30,4 +30,5 @@ Welcome to your own photo gallery! This application is designed for simple stora
 
 ## Screenshots
 
-(insert screenshots)
+![screenshot 1](/assets/images/Screenshot.PNG)
+![screenshot 2](/assets/images/screenshot2.PNG)
